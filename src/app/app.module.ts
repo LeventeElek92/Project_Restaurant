@@ -2,7 +2,6 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -12,8 +11,8 @@ import { ProjectItemsComponent } from './project-items/project-items.component';
 import { ProjectBookingComponent } from './project-booking/project-booking.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProjectAdminpanelComponent } from './project-adminpanel/project-adminpanel.component';
-import { Component } from '@angular/core';
-import { AgGridAngular } from 'ag-grid-angular'; 
+//import { Component } from '@angular/core';
+//import { AgGridAngular } from 'ag-grid-angular'; 
 
 @NgModule({
   declarations: [
@@ -22,9 +21,8 @@ import { AgGridAngular } from 'ag-grid-angular';
     ProjectItemsComponent,
     ProjectBookingComponent,
     ProjectAdminpanelComponent,
-    Component,
-    AgGridAngular,
-    RouterModule,
+    //Component,
+    //AgGridAngular,
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
@@ -37,8 +35,6 @@ import { AgGridAngular } from 'ag-grid-angular';
     BrowserAnimationsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    RouterModule,
-  
   ],
   providers: [],
   bootstrap: [AppComponent]

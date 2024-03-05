@@ -17,7 +17,7 @@ export class ProjectItemsComponent {
     private base:BaseService, 
     private config: ConfigService
     ){
-    this.base.getAll().subscribe(
+    this.base.getAll("weeklymenu").subscribe(
       weeklyMenuData=>{
         this.weeklyMenu=weeklyMenuData, 
         console.log(this.weeklyMenu)

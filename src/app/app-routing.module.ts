@@ -11,7 +11,7 @@ const routes: Routes = [
   {"path": "weeklymenu", "component":ProjectItemsComponent},
   {"path": "adminpanel", "component":ProjectAdminpanelComponent},
   {"path": " ", "component":ProjectHeaderComponent},
-  {"path": "**", "component":ProjectHeaderComponent},
+  {"path": "**", "component":ProjectHeaderComponent}, 
 
 
 ];

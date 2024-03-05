@@ -5,10 +5,18 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class BaseService {
-  serverURL="http://localhost:3000/weeklymenu"
+  serverURL="http://localhost:3000/" //weeklymenu volt itt
   constructor(private http:HttpClient) { }
 
-  getAll(){
-    return this.http.get(this.serverURL);
+  getAll(dishes: any){
+    return this.http.get(this.serverURL+dishes);
   }
+
+  onModify(dishes:string, id:any){
+    return this.http.delete(this.serverURL+dishes+'/'+id)
+  }
+
 }
+
+
+

@@ -15,7 +15,7 @@ export class ProjectAdminpanelComponent {
     private base:BaseService, 
     private config: ConfigService
     ){
-    this.base.getAll().subscribe(
+    this.base.getAll("weeklymenu").subscribe(
       weeklyMenuData=>{
         this.weeklyMenu=weeklyMenuData, 
         console.log(this.weeklyMenu)
@@ -25,5 +25,7 @@ export class ProjectAdminpanelComponent {
       console.log(this.columns)
     
   }
+
+  
 
 }
