@@ -1,22 +1,26 @@
-<h1>Dolgozói felület - Heti Menü szerkesztő</h1>
+<h1>Szerkesztő felület</h1>
 <br>
 
 <div class="row">
     <div *ngFor="let column of columns" class="col">
-        {{ column }}
-    </div>    
-    <div class="col">
-        Menü módosítása
+        {{ column.text }}
     </div>
+    <div class="col">
+        Módosítás
+    </div>   
 </div>
 
-<div *ngFor="let menu of weeklyMenu" class="row">
+<br> 
+
+<div *ngFor="let menu of weeklymenu" class="row">
     <div *ngFor="let column of columns; let i = index" class="col">
-        {{ menu[column] }}
+        <input [(ngModel)]="menu[column.key]" type="text" class="form-control">
+
+        <!-- {{ menu[column.key] }}-->    
+    </div>    
+    <div class="col d-grid gap-2 d-md-block">
+        <button (click)="onModify(menu)" class="btn btn-primary text-right" type="button">Módosítás</button>
     </div>    
 </div>
 
-<div class="col d-grid gap-2 d-md-block">
-    <button class="btn btn-primary text-right" type="button">Módosít</button>
-</div>
 

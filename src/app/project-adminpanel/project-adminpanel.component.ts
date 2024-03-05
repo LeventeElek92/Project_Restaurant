@@ -8,24 +8,33 @@ import { ConfigService } from '../config.service';
   styleUrls: ['./project-adminpanel.component.css']
 })
 export class ProjectAdminpanelComponent {
-  weeklyMenu:any;
+  weeklymenu:any;
   columns: any;
+
+  getData(){
+    this.base.getAll("weeklymenu").subscribe(
+      weeklyMenuData=>{
+        this.weeklymenu=weeklyMenuData, 
+        console.log(this.weeklymenu)
+      }
+    )
+  }
 
   constructor(
     private base:BaseService, 
     private config: ConfigService
     ){
-    this.base.getAll("weeklymenu").subscribe(
-      weeklyMenuData=>{
-        this.weeklyMenu=weeklyMenuData, 
-        console.log(this.weeklyMenu)
-      }
-    )
+    this.getData()
     this.columns=this.config.getWeeklyMenuCol()
       console.log(this.columns)
     
   }
-
   
+  onModify(menu:any){
+    this.base.onModify("weeklymenu",menu).subscribe(
+      ()=>this.getData()
+    )
+  }
+
 
 }

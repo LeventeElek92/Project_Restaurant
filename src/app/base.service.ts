@@ -12,8 +12,10 @@ export class BaseService {
     return this.http.get(this.serverURL+dishes);
   }
 
-  onModify(dishes:string, id:any){
-    return this.http.delete(this.serverURL+dishes+'/'+id)
+  onModify(dishes:string, menu:any){
+    return this.http.put(
+      this.serverURL+dishes+'/'+menu.id, menu
+      )
   }
 
 }
