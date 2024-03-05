@@ -1,0 +1,44 @@
+{
+    "weeklymenu" : [
+      { 
+          "id": 0, 
+          "day": "Monday", 
+          "appetizer": "Savanyúkáposzta-leves egyszerűen",
+          "main_course": "Darált húsos raguval töltött padlizsán",
+          "dessert": "Hamis túrós sütemény",
+          "vegetarian": "Rakott zöldségek besamelmártással"
+      },
+    { 
+          "id": 1, 
+          "day": "Tuesday" ,
+          "appetizer": "Szárazborsóleves kolbásszal",
+          "main_course": "Klasszikus skót tojás",
+          "dessert": "Pudingos almás pite",
+          "vegetarian": "Kölessel töltött padlizsántekercs"
+      },
+    { 
+          "id": 2, 
+          "day": "Wednesday" ,
+          "appetizer": "Csirkemellpástétom bagettel",
+          "main_course": "Édesköményes csirketál",
+          "dessert": "Banános-mogyorós kocka",
+          "vegetarian": "Sajtrolád krémsajtos-brokkolis töltelékkel"
+      },
+    { 
+          "id": 3, 
+          "day": "Thursday" ,
+          "appetizer": "Tárkonyos-tejszínes sonkaraguleves",
+          "main_course": "Legyezős csirkemell",
+          "dessert": "Kakaós-túrós bociszelet",
+          "vegetarian": "Zsályás gnocchi"
+      },
+    { 
+          "id": 4, 
+          "day": "Friday" ,
+          "appetizer": "Zalai csülkös-babos répaleves",
+          "main_course": "Paradicsomos húsgombóc spagettivel",
+          "dessert": "Húsvéti kakaós kalács",
+          "vegetarian": "Csőben sült sajtos tészta"
+      }
+  ]
+}
