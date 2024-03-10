@@ -10,20 +10,34 @@ export class ConfigService {
     {key:"appetizer", text:'Előétel', type:"text"}, 
     {key:"main_course", text:'Főétel', type:"text"}, 
     {key:"dessert", text:'Desszert', type:"text"}, 
-    {key:"vegetarian", text:'Vegetáriánusoknak', type:"text"}, 
+    {key:"vegetarian", text:'Vegetáriánus', type:"text"}, 
   ]
 
-  constructor() { }
-/* public weeklyMenuCol: ColDef[] = [
-  {field: 'day', headerName: 'Nap'},
-  {field: 'appetizer', headerName: 'Előétel'},
-  {field: 'main_course', headerName: 'Főétel'},
-  {field: 'dadessert', headerName: 'Desszert'},
-  {field: 'vegetarian', headerName: 'Vegetáriánusoknak'},
+  private foodCol=[
+    {key:"id", text:"Sorszám", type:"number"},
+    {key:"foodname", text:"Étel neve", type:"text"},
+    {key:"price", text:"Ár", type:"text"},  
+  ]
 
-] */
+  private drinkCol=[
+    {key:"id", text:"Sorszám", type:"number"},
+    {key:"drinkname", text:"Ital neve", type:"text"},
+    {key:"price", text:"Ár", type:"text"},  
+  ]
+
+
+  constructor() { }
 
   getWeeklyMenuCol(){
     return this.weeklyMenuCol
   }
+
+  getFoodCol(){
+    return this.foodCol
+  }
+
+  getDrinkCol(){
+    return this.drinkCol
+  }
+
 }

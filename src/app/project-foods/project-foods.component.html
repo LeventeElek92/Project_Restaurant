@@ -1,0 +1,21 @@
+<div class="row">
+    <div *ngFor="let col of foodCols" class="col"> <!-- ételoszlopok meghívása kell -->
+        {{ col.text }}
+    </div>
+    <div class="col">
+        Műveletek
+    </div>
+
+    <div *ngFor="let food of foods" class="row">
+        <div *ngFor="let col of foodCols" class="col"> <!-- ételoszlopok meghívása kell -->
+            {{ food[col.key] }}
+        </div>
+    
+        <div class="col d-grid gap-2 d-md-block">
+            <button type="button" class="mx-2 btn btn-warning">Módosítás</button>
+            <button (click)="onFoodDelete(food)" type="button" class="btn btn-danger">Törlés</button>    
+        </div>
+    </div>
+    
+</div>
+

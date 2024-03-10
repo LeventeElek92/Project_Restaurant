@@ -1,13 +1,15 @@
 <h1>Szerkesztő felület</h1>
+
+<h3>Menü Szerkesztése</h3>
+
 <br>
 
 <div class="row">
-    <div *ngFor="let column of columns" class="col">
-        {{ column.text }}
+    <div *ngFor="let column of columns" class="col text text-light bg-dark">
+        {{ column.text | uppercase }}
     </div>
-    <div class="col">
-        Módosítás
-    </div>   
+    <div class="col text text-light bg-dark">
+        MÓDOSÍTÁS
 </div>
 
 <br> 
@@ -23,4 +25,11 @@
     </div>    
 </div>
 
+<br>
+
+<h3>Étlap Szerkesztése</h3>
+
+<br>
+
+<h3>Itallap szerkesztése</h3>
 

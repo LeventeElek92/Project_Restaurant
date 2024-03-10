@@ -1,0 +1,21 @@
+<div class="row">
+    <div *ngFor="let col of drinkCols" class="col"> <!-- italoszlopok meghívása kell -->
+        {{ col.text }}
+    </div>
+    <div class="col">
+        Műveletek
+    </div>
+
+    <div *ngFor="let drink of drinks" class="row">
+        <div *ngFor="let col of drinkCols" class="col"> <!-- italoszlopok meghívása kell -->
+            {{ drink[col.key] }}
+        </div>
+    
+        <div class="col d-grid gap-2 d-md-block">
+            <button type="button" class="mx-2 btn btn-warning">Módosítás</button>
+            <button (click)="onDrinkDelete(drink)" type="button" class="btn btn-danger">Törlés</button>    
+        </div>
+    </div>
+    
+</div>
+

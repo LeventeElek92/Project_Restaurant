@@ -1,4 +1,4 @@
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA, Component } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -11,8 +11,9 @@ import { ProjectItemsComponent } from './project-items/project-items.component';
 import { ProjectBookingComponent } from './project-booking/project-booking.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProjectAdminpanelComponent } from './project-adminpanel/project-adminpanel.component';
-//import { Component } from '@angular/core';
-//import { AgGridAngular } from 'ag-grid-angular'; 
+import { ProjectMainpageComponent } from './project-mainpage/project-mainpage.component';
+import { ProjectDrinksComponent } from './project-drinks/project-drinks.component';
+import { ProjectFoodsComponent } from './project-foods/project-foods.component';
 
 @NgModule({
   declarations: [
@@ -21,11 +22,9 @@ import { ProjectAdminpanelComponent } from './project-adminpanel/project-adminpa
     ProjectItemsComponent,
     ProjectBookingComponent,
     ProjectAdminpanelComponent,
-    //Component,
-    //AgGridAngular,
-  ],
-  schemas: [
-    CUSTOM_ELEMENTS_SCHEMA
+    ProjectMainpageComponent,
+    ProjectDrinksComponent,
+    ProjectFoodsComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +33,7 @@ import { ProjectAdminpanelComponent } from './project-adminpanel/project-adminpa
     FormsModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    ReactiveFormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

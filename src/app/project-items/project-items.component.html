@@ -1,62 +1,6 @@
-<div class="container">
-  <h1 class="text-center">
-      <img src="assets/img/restaurant.png" alt="restaurant" width="75" height="75" class="text-center">
-      Well Fed Restaurant
-  </h1>
-</div>
-
-<br>
-
-<!-- npm start-ot ne felejtsd el -->
-
-<nav class="navbar navbar-expand-lg">
-  <div class="container justify-content-center">
-      <ul class="navbar-nav text-center">
-
-        <li class="nav-item">
-          <a class="nav-link" 
-          routerLink="/home" >
-          Home
-        </a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link"
-          routerLink="/weeklymenu">
-          Vacsora menü
-        </a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" 
-          routerLink="**">
-          Italkínálat
-        </a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" 
-          routerLink="/booking">
-          Asztalfoglalás
-        </a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" 
-          routerLink="**">
-          Kapcsolat
-        </a>
-        </li>
-
-      </ul>
-    </div>
-</nav>
-
-<br>
-
 <div class="row">
-    <div *ngFor="let column of columns" class="col">
-        {{ column.text }}
+    <div *ngFor="let column of columns" class="col text text-light bg-dark">
+        {{ column.text | uppercase }}
     </div>    
 </div>
 
@@ -65,8 +9,7 @@
 <div *ngFor="let menu of weeklyMenu" class="row">
     <div *ngFor="let column of columns; let i = index" class="col">
         {{ menu[column.key] }}
-    </div>    
-
+    </div>
 </div>
 
 

@@ -1,0 +1,31 @@
+{
+    "foods": [
+      {
+        "id": "1",
+        "foodname": "Sültburgonya",
+        "price": "900 Ft"
+      },
+      {
+        "id": "2",
+        "foodname": "Rizi-bizi",
+        "price": "800 Ft"
+      },
+      {
+        "id": "3",
+        "foodname": "Rántott szelet",
+        "price": "1 200 Ft"
+      },
+      {
+        "id": "4",
+        "foodname": "Csirkemellfilé",
+        "price": "1 500 Ft"
+      },
+      {
+        "id": "5",
+        "foodname": "Marhapörkölt",
+        "price": "2 000 Ft"
+      }
+    ]
+  }
+
+  

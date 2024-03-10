@@ -2,6 +2,11 @@
     background-color: #1b1c22;
 }
 
+nav.navbar {
+    max-width: 1320px; /* applying max-width */
+    margin: 0 auto; /* center */
+}
+
 .navbar a{
     color: #e6e6e6;
 }
@@ -30,4 +35,8 @@
 .navbar .nav-item .nav-link.activ::before,
 .navbar .nav-item .nav-link:hover::before{
     transform: scale(1);
+}
+
+.active{
+    text-decoration: underline;
 }

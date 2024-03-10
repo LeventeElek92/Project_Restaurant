@@ -1,0 +1,29 @@
+{
+    "drinks": [
+      {
+        "id": "1",
+        "drinkname": "Kóla",
+        "price": "900 Ft"
+      },
+      {
+        "id": "2",
+        "drinkname": "Ásvánívíz, szénsavas",
+        "price": "900 Ft"
+      },
+      {
+        "id": "3",
+        "drinkname": "Ásványvíz, szénsavmentes",
+        "price": "900 Ft"
+      },
+      {
+        "id": "4",
+        "drinkname": "Narancslé",
+        "price": "900 Ft"
+      },
+      {
+        "id": "5",
+        "drinkname": "Pálinka",
+        "price": "900 Ft"
+      }
+    ]
+  }

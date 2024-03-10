@@ -13,56 +13,59 @@
 
           <li class="nav-item">
             <a class="nav-link" 
-            routerLink="/home" >
-            Home
+            routerLink="/home"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact:true}" >
+            Főoldal
           </a>
           </li>
 
           <li class="nav-item">
             <a class="nav-link"
-            routerLink="/weeklymenu">
-            Vacsora menü
+            routerLink="/menu"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact:true}" >
+            Menü
+          </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link"
+            routerLink="/etlap"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact:true}" >
+            Étlap
           </a>
           </li>
 
           <li class="nav-item">
             <a class="nav-link" 
-            routerLink="**">
-            Italkínálat
+            routerLink="/itallap"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact:true}" >
+            Itallap
           </a>
           </li>
 
           <li class="nav-item">
             <a class="nav-link" 
-            routerLink="/booking">
+            routerLink="/asztalfoglalas"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact:true}" >
             Asztalfoglalás
           </a>
           </li>
 
           <li class="nav-item">
             <a class="nav-link" 
-            routerLink="**">
-            Kapcsolat
-          </a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" 
-            routerLink="adminpanel">
+            routerLink="/adminpanel"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact:true}" >
             Admin Panel
           </a>
           </li>
-
-
         </ul>
       </div>
   </nav>
-
   <br>
-<div class="container">
-    <section>
-        <div class="video_div">
-            <img src="assets/img/background.jpg" alt="restaurant" class="img-fluid max-width: 100%">
-        </div>
-    </section>
-</div>
+

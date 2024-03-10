@@ -6,7 +6,11 @@ import { Injectable } from '@angular/core';
 })
 export class BaseService {
   serverURL="http://localhost:3000/" //weeklymenu volt itt
+  //serverURLFood="http://localhost:3000/foods"
+  //serverURLDrink="http://localhost:3000/drinks"
   constructor(private http:HttpClient) { }
+
+  //Menü gombok
 
   getAll(dishes: any){
     return this.http.get(this.serverURL+dishes);
@@ -17,6 +21,33 @@ export class BaseService {
       this.serverURL+dishes+'/'+menu.id, menu
       )
   }
+
+  //Étlap gombok
+
+  getAllFoods(somefood:any){ //Étlaphoz tartozik
+    return this.http.get(this.serverURL+somefood)
+    //return this.http.get(this.serverURLFood+somefood);
+  }
+
+  onFoodDelete(somefood:string, foodid:any){
+    console.log("Delete: ", this.serverURL+somefood+'/'+foodid)
+    return this.http.delete(
+      this.serverURL+somefood+'/'+foodid)
+  }
+
+  //Itallap gombok
+
+  getAllDrinks(somedrink:any){ //Itallaphoz tartozik
+    return this.http.get(this.serverURL+somedrink)
+    //return this.http.get(this.serverURLDrink+somedrink);
+  }
+
+  onDrinkDelete(somedrink:string, drinkid:any){
+    console.log("Delete: ", this.serverURL+ somedrink + '/' + drinkid)
+    return this.http.delete(
+      this.serverURL+somedrink+'/'+ drinkid)
+  }
+
 
 }
 
