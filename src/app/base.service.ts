@@ -30,9 +30,21 @@ export class BaseService {
   }
 
   onFoodDelete(somefood:string, foodid:any){
-    console.log("Delete: ", this.serverURL+somefood+'/'+foodid)
+    console.log("Delete: ", this.serverURL + somefood+ '/' +foodid)
     return this.http.delete(
       this.serverURL+somefood+'/'+foodid)
+  }
+
+  onFoodModify(somefood:string, foodid:any){
+    return this.http.put(
+      this.serverURL+somefood+'/'+foodid.id, foodid
+    )
+  }
+
+  onFoodCreate(somefood:string, foodid:any){
+    return this.http.post(
+      this.serverURL + somefood, foodid
+    )
   }
 
   //Itallap gombok
@@ -43,9 +55,21 @@ export class BaseService {
   }
 
   onDrinkDelete(somedrink:string, drinkid:any){
-    console.log("Delete: ", this.serverURL+ somedrink + '/' + drinkid)
+    console.log("Delete: ", this.serverURL + somedrink + '/' + drinkid)
     return this.http.delete(
-      this.serverURL+somedrink+'/'+ drinkid)
+      this.serverURL+somedrink + '/' + drinkid)
+  }
+
+  onDrinkModify(somedrink:string, drinkid:any){
+    return this.http.put(
+      this.serverURL+somedrink + '/' + drinkid.id, drinkid
+    )
+  }
+
+  onDrinkCreate(somedrink:string, drinkid:any){
+    return this.http.post(
+      this.serverURL + somedrink, drinkid
+    )
   }
 
 

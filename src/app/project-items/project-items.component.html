@@ -1,3 +1,4 @@
+<!-- Fejléc -->
 <div class="row">
     <div *ngFor="let column of columns" class="col text text-light bg-dark">
         {{ column.text | uppercase }}
@@ -6,109 +7,10 @@
 
 <br>
 
+<!-- Tartalom -->
 <div *ngFor="let menu of weeklyMenu" class="row">
     <div *ngFor="let column of columns; let i = index" class="col">
         {{ menu[column.key] }}
     </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <div>
-    <label for="day">Napi ajánlat</label>
-    <input id="day" [(ngModel)]="menu.day" placeholder="menu">
-    <label for="appetizer">Előétel</label>
-    <input id="appetizer" [(ngModel)]="menu.appetizer" placeholder="előétel">
-    <label for="main_course">Főétel</label>
-    <input id="main_course" [(ngModel)]="menu.main_course" placeholder="főétel">
-    <label for="dessert">Desszert</label>
-    <input id="dessert" [(ngModel)]="menu.dessert" placeholder="desszert">
-    <label for="vegetarian">Vegetáriánusoknak</label>
-    <input id="vegetarian" [(ngModel)]="menu.vegetarian" placeholder="vegetáriánusoknak">
-</div>
- -->
-
-<!--  <h2>Heti Menü</h2>
-<ul class="menu">
-    <li *ngFor="let menu of hetimenu">
-        <span class="id">{{menu.id}}</span>
-        <span class="day">{{menu.day}}</span>
-        <span class="appetizer">{{menu.appetizer}}</span>
-        <span class="main_course">{{menu.main_course}}</span>
-        <span class="dessert">{{menu.dessert}}</span>
-        <span class="vegetarian">"{{menu.vegetarian}}</span>
-    </li>
- </ul>
- -->
-<!--  <div class="table-responsive">
-    <table class="table">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">{{menu.day}}</th>
-        <th scope="col">Heading</th>
-        <th scope="col">Heading</th>
-        <th scope="col">Heading</th>
-        <th scope="col">Heading</th>
-      </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-          <td>Cell</td>
-        </tr>
-        <tr>
-            <th scope="row">4</th>
-            <td>Cell</td>
-            <td>Cell</td>
-            <td>Cell</td>
-            <td>Cell</td>
-            <td>Cell</td>
-          </tr>
-  
-      </tbody>
-    </table>
-  </div> -->
-
 

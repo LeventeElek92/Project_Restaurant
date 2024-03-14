@@ -10,32 +10,22 @@ import { ConfigService } from '../config.service';
 export class ProjectDrinksComponent {
   drinks:any;
   drinkCols: any;
-  constructor(
-    private base: BaseService,
-    private config: ConfigService
-    ){
+
+  getDrinkData(){
     this.base.getAllDrinks("drinks").subscribe(
       drinkData=>{
         this.drinks=drinkData; 
         console.log(this.drinks)
       }
     )
+  }
+
+  constructor(
+    private base: BaseService,
+    private config: ConfigService
+    ){
+      this.getDrinkData()
     this.drinkCols=this.config.getDrinkCol()
     console.log(this.drinkCols)
   }
-
-  onDrinkDelete(drink:any){
-    let id=drink.id;
-    this.base.onDrinkDelete("drinks",id).subscribe(
-      ()=>{
-        this.base.getAllDrinks("drinks").subscribe(
-          drinkData=>{
-            this.drinks=drinkData; 
-            console.log(this.drinks)
-          }
-        )    
-      }
-    )
-  }
-
 }

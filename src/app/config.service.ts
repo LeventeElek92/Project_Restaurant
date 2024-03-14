@@ -16,13 +16,13 @@ export class ConfigService {
   private foodCol=[
     {key:"id", text:"Sorszám", type:"number"},
     {key:"foodname", text:"Étel neve", type:"text"},
-    {key:"price", text:"Ár", type:"text"},  
+    {key:"price", text:"Ár(Ft)", type:"number"},  
   ]
 
   private drinkCol=[
     {key:"id", text:"Sorszám", type:"number"},
     {key:"drinkname", text:"Ital neve", type:"text"},
-    {key:"price", text:"Ár", type:"text"},  
+    {key:"price", text:"Ár(Ft)", type:"number"},  
   ]
 
 

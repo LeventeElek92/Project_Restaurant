@@ -1,8 +1,12 @@
 <h1>Szerkesztő felület</h1>
 
+<!-- Menü -->
+
 <h3>Menü Szerkesztése</h3>
 
 <br>
+
+<!-- Menü fejléc -->
 
 <div class="row">
     <div *ngFor="let column of columns" class="col text text-light bg-dark">
@@ -14,12 +18,15 @@
 
 <br> 
 
-<div *ngFor="let menu of weeklymenu" class="row">
+<!-- Menü tartalom -->
+
+<div *ngFor="let menu of weeklymenu" class="row my-2">
     <div *ngFor="let column of columns; let i = index" class="col">
         <input [(ngModel)]="menu[column.key]" type="text" class="form-control">
-
-        <!-- {{ menu[column.key] }}-->    
     </div>    
+
+<!-- Menü gomb -->
+
     <div class="col d-grid gap-2 d-md-block">
         <button (click)="onModify(menu)" class="btn btn-primary text-right" type="button">Módosítás</button>
     </div>    
@@ -27,9 +34,93 @@
 
 <br>
 
+<!-- Étlap -->
+
 <h3>Étlap Szerkesztése</h3>
+
+<!-- Étlap fejléc -->
+
+<div class="row">
+    <div *ngFor="let col of foodCols" class="col text text-light bg-dark"> <!-- ételoszlopok meghívása kell -->
+        {{ col.text }}
+    </div>
+    <div class="col text text-light bg-dark">
+        MŰVELETEK
+    </div>
+
+<!-- Étlap tartalom -->
+
+    <div *ngFor="let food of foods" class="row my-2">
+        <div *ngFor="let col of foodCols" class="col"> <!-- ételoszlopok meghívása kell -->
+            <input [(ngModel)]="food[col.key]" type="text" class="form-control">
+        </div>
+
+<!-- Étlap gombok -->
+
+        <div class="col d-grid gap-2 d-md-block">
+            <button (click)="onFoodModify(food)" type="button" class="mx-2 btn btn-primary">Módosítás</button>
+            <button (click)="onFoodDelete(food)" type="button" class="btn btn-danger">Törlés</button>    
+        </div>
+    </div>    
+</div>
+
+<!-- Új étel hozzáadása -->
+
+<div class="row my-4">
+    <div *ngFor="let col of foodCols" class="col">
+        <input [(ngModel)]="newFood[col.key]" type="text" class="form-control">
+    </div>
+
+<!-- Hozzáadás gomb -->
+
+    <div class="col d-grid gap-2 d-md-block">
+        <button (click)="onFoodCreate()" type="button" class="mx-2 btn btn-dark">Új étel hozzáadása</button>
+    </div>
+</div>    
 
 <br>
 
+<!-- Itallap -->
+
 <h3>Itallap szerkesztése</h3>
 
+<!-- Itallap fejléc -->
+
+<div class="row">
+    <div *ngFor="let col of drinkCols" class="col text text-light bg-dark"> <!-- italoszlopok meghívása kell -->
+        {{ col.text }}
+    </div>
+    <div class="col text text-light bg-dark">
+        MŰVELETEK
+    </div>
+
+<!-- Itallap tartalom -->
+
+    <div *ngFor="let drink of drinks" class="row my-2">
+        <div *ngFor="let col of drinkCols" class="col"> <!-- italoszlopok meghívása kell -->
+            <input [(ngModel)]="drink[col.key]" type="text" class="form-control">
+        </div>
+
+<!-- Itallap gombok -->
+    
+        <div class="col d-grid gap-2 d-md-block">
+            <button (click)="onDrinkModify(drink)" type="button" class="mx-2 btn btn-primary">Módosítás</button>
+            <button (click)="onDrinkDelete(drink)" type="button" class="btn btn-danger">Törlés</button>    
+        </div>
+    </div>
+    
+</div>
+
+<!-- Új ital hozzáadása -->
+
+<div class="row my-4">
+    <div *ngFor="let col of drinkCols" class="col"> 
+        <input [(ngModel)]="newDrink[col.key]" type="text" class="form-control">
+    </div>
+
+<!-- Hozzáadás gomb -->
+
+    <div class="col d-grid gap-2 d-md-block">
+        <button (click)="onDrinkCreate()" type="button" class="mx-2 btn btn-dark">Új ital hozzáadása</button>
+    </div>
+</div>

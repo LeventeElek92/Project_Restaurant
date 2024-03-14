@@ -1,7 +1,7 @@
 {
   "weeklymenu": [
     {
-      "id": "0",
+      "id": "1",
       "day": "Hétfő",
       "appetizer": "Savanyúkáposzta-leves egyszerűen",
       "main_course": "Darált húsos raguval töltött padlizsán",
@@ -9,7 +9,7 @@
       "vegetarian": "Rakott zöldségek besamelmártással"
     },
     {
-      "id": "1",
+      "id": "2",
       "day": "Kedd",
       "appetizer": "Szárazborsóleves kolbásszal",
       "main_course": "Klasszikus skót tojás",
@@ -17,7 +17,7 @@
       "vegetarian": "Kölessel töltött padlizsántekercs"
     },
     {
-      "id": "2",
+      "id": "3",
       "day": "Szerda",
       "appetizer": "Csirkemellpástétom bagettel",
       "main_course": "Édesköményes csirketál",
@@ -25,7 +25,7 @@
       "vegetarian": "Sajtrolád krémsajtos-brokkolis töltelékkel"
     },
     {
-      "id": "3",
+      "id": "4",
       "day": "Csütörtök",
       "appetizer": "Tárkonyos-tejszínes sonkaraguleves",
       "main_course": "Legyezős csirkemell",
@@ -33,7 +33,7 @@
       "vegetarian": "Zsályás gnocchi"
     },
     {
-      "id": "4",
+      "id": "5",
       "day": "Péntek",
       "appetizer": "Zalai csülkös-babos répaleves",
       "main_course": "Paradicsomos húsgombóc spagettivel",
@@ -41,60 +41,63 @@
       "vegetarian": "Csőben sült sajtos tészta"
     }
   ],
-
   "foods": [
     {
       "id": "1",
       "foodname": "Sültburgonya",
-      "price": "900 Ft"
+      "price": "900"
     },
     {
       "id": "2",
       "foodname": "Rizi-bizi",
-      "price": "800 Ft"
+      "price": "800"
     },
     {
       "id": "3",
       "foodname": "Rántott szelet",
-      "price": "1 200 Ft"
+      "price": "1 200"
     },
     {
       "id": "4",
       "foodname": "Csirkemellfilé",
-      "price": "1 500 Ft"
+      "price": "900"
     },
     {
       "id": "5",
-      "foodname": "Marhapörkölt",
-      "price": "2 000 Ft"
+      "foodname": "Pizza",
+      "price": "600"
+    },
+    {
+      "id": "6",
+      "foodname": "Gyros",
+      "price": "600"
     }
   ],
-  
   "drinks": [
     {
       "id": "1",
       "drinkname": "Kóla",
-      "price": "900 Ft"
+      "price": "900"
     },
     {
       "id": "2",
       "drinkname": "Ásvánívíz, szénsavas",
-      "price": "900 Ft"
+      "price": "900"
     },
     {
       "id": "3",
       "drinkname": "Ásványvíz, szénsavmentes",
-      "price": "900 Ft"
+      "price": "900"
     },
     {
       "id": "4",
-      "drinkname": "Narancslé",
-      "price": "900 Ft"
+      "drinkname": "Pálinka",
+      "price": "1 500"
     },
     {
       "id": "5",
-      "drinkname": "Pálinka",
-      "price": "900 Ft"
+      "drinkname": "7UP",
+      "price": "600"
     }
   ]
 }

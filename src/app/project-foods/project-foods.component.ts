@@ -28,11 +28,4 @@ export class ProjectFoodsComponent {
     this.foodCols=this.config.getFoodCol()
     console.log(this.foodCols)
   }
-
-  onFoodDelete(food:any){
-    let id=food.id;
-    this.base.onFoodDelete("foods",id).subscribe(
-      ()=>this.getFoodData()
-    )
-  }
 }
