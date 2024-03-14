@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { AngularFireDatabase } from '@angular/fire/compat/database';
+
 
 @Injectable({
   providedIn: 'root'
@@ -8,7 +10,7 @@ export class BaseService {
   serverURL="http://localhost:3000/" //weeklymenu volt itt
   //serverURLFood="http://localhost:3000/foods"
   //serverURLDrink="http://localhost:3000/drinks"
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient, private db:AngularFireDatabase) {}
 
   //Menü gombok
 

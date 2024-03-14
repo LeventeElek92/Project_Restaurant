@@ -58,12 +58,22 @@
 
           <li class="nav-item">
             <a class="nav-link" 
-            routerLink="/adminpanel"
+            routerLink="/login"
             routerLinkActive="active"
             [routerLinkActiveOptions]="{exact:true}" >
-            Admin Panel
+            Bejelentkezés
           </a>
           </li>
+
+          <li *ngIf="user" class="nav-item">
+            <a class="nav-link" 
+            (click)="signOut()"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact:true}" >
+            Kijelentkezés
+          </a>
+          </li>
+
         </ul>
       </div>
   </nav>

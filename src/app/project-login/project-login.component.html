@@ -1,0 +1,13 @@
+<div class="form-floating mb-3">
+    <input [(ngModel)]="email" type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+    <label for="floatingInput">Email address</label>
+  </div>
+  <div class="form-floating mb-3">
+    <input [(ngModel)]="password" type="password" class="form-control" id="floatingPassword" placeholder="Password">
+    <label for="floatingPassword">Password</label>
+  </div>  
+
+<button [disabled]="validUser()" (click)="signUp()" type="button" class="btn btn-dark mb-3">Regisztráció</button>
+
+<button (click)="signIn()" type="button" class="btn btn-dark mb-3">Belépés</button>
+

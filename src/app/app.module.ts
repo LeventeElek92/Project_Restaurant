@@ -2,6 +2,9 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA, Component } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { AngularFireModule } from '@angular/fire/compat'
+import { AngularFireDatabaseModule } from '@angular/fire/compat/database'
+
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -14,6 +17,8 @@ import { ProjectAdminpanelComponent } from './project-adminpanel/project-adminpa
 import { ProjectMainpageComponent } from './project-mainpage/project-mainpage.component';
 import { ProjectDrinksComponent } from './project-drinks/project-drinks.component';
 import { ProjectFoodsComponent } from './project-foods/project-foods.component';
+import { Environments } from './environment';
+import { ProjectLoginComponent } from './project-login/project-login.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +29,8 @@ import { ProjectFoodsComponent } from './project-foods/project-foods.component';
     ProjectAdminpanelComponent,
     ProjectMainpageComponent,
     ProjectDrinksComponent,
-    ProjectFoodsComponent
+    ProjectFoodsComponent,
+    ProjectLoginComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +39,9 @@ import { ProjectFoodsComponent } from './project-foods/project-foods.component';
     FormsModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AngularFireModule.initializeApp(Environments.firebaseConfig),
+    AngularFireDatabaseModule
   ],
   providers: [],
   bootstrap: [AppComponent]

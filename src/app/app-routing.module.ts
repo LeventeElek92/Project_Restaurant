@@ -6,6 +6,7 @@ import { ProjectAdminpanelComponent } from './project-adminpanel/project-adminpa
 import { ProjectMainpageComponent } from './project-mainpage/project-mainpage.component';
 import { ProjectFoodsComponent } from './project-foods/project-foods.component';
 import { ProjectDrinksComponent } from './project-drinks/project-drinks.component';
+import { ProjectLoginComponent } from './project-login/project-login.component';
 
 const routes: Routes = [
   {"path": "home", "component":ProjectMainpageComponent},
@@ -13,6 +14,8 @@ const routes: Routes = [
   {"path": "etlap", "component":ProjectFoodsComponent},
   {"path": "itallap", "component":ProjectDrinksComponent},
   {"path": "asztalfoglalas", "component":ProjectBookingComponent},
+  {"path": "login", "component":ProjectLoginComponent},
+  //{"path": "adminpanel", redirectTo:"login"},
   {"path": "adminpanel", "component":ProjectAdminpanelComponent},
   {"path": " ", "component":ProjectMainpageComponent},
   {"path": "**", "component":ProjectMainpageComponent}, 
