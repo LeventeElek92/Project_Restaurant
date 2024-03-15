@@ -1,3 +1,7 @@
+<div class="row-3 mb-2 d-flex justify-content-center align-items-center">
+    <img src="assets/img/menu.jpg" alt="etlap">
+</div>
+
 <!-- Fejléc -->
 <div class="row">
     <div *ngFor="let column of columns" class="col text text-light bg-dark">
@@ -8,7 +12,7 @@
 <br>
 
 <!-- Tartalom -->
-<div *ngFor="let menu of weeklyMenu" class="row">
+<div *ngFor="let menu of weeklyMenu" class="row border border-3 my-3 fw-bold">
     <div *ngFor="let column of columns; let i = index" class="col">
         {{ menu[column.key] }}
     </div>

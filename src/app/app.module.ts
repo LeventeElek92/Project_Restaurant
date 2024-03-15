@@ -19,6 +19,7 @@ import { ProjectDrinksComponent } from './project-drinks/project-drinks.componen
 import { ProjectFoodsComponent } from './project-foods/project-foods.component';
 import { Environments } from './environment';
 import { ProjectLoginComponent } from './project-login/project-login.component';
+import { ProjectFooterComponent } from './project-footer/project-footer.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { ProjectLoginComponent } from './project-login/project-login.component';
     ProjectDrinksComponent,
     ProjectFoodsComponent,
     ProjectLoginComponent,
+    ProjectFooterComponent,
   ],
   imports: [
     BrowserModule,

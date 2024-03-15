@@ -1,12 +1,16 @@
+<div class="row-3 mb-2 d-flex justify-content-center align-items-center">
+    <img src="assets/img/etlap.jpg" alt="etlap">
+</div>
+
 <!-- Fejléc -->
-<div class="row">
+<div class="row mb-2">
     <div *ngFor="let col of foodCols" class="col text text-light bg-dark"> <!-- ételoszlopok meghívása kell -->
         {{ col.text }}
     </div>
 </div>
 
 <!-- Tartalom -->
-<div *ngFor="let food of foods" class="row my-2">
+<div *ngFor="let food of foods" class="row my-3 border border-3 fw-bold">
     <div *ngFor="let col of foodCols" class="col"> <!-- ételoszlopok meghívása kell -->
         {{ food[col.key] }}
     </div>    

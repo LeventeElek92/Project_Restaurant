@@ -1,16 +1,25 @@
-<div class="col">
-    <div *ngFor="let row of rows" class="row">
-            {{ row.text }}
-    </div>
+<div class="row align-self-end">
+    <img src="assets/img/reserved.jpg" alt="asztalfoglalás">
 </div>
 
-<div class="col my-4">
-    <div *ngFor="let row of rows" class="col"> 
-        <input [(ngModel)]="newReservation[row.key]" type="text" class="form-control">
-    </div>
-</div>
-    <!-- Hozzáadás gomb -->
+<div class="container">
+    <div class="row d-flex justify-content-center align-items-center">
+        <div class="col-2 mb-2">
+            <div *ngFor="let row of rows" class="row my-4 fw-bold">
+                    {{ row.text }}
+            </div>
+        </div>
 
-<div class="row d-grid gap-2 d-md-block">
-    <button (click)="onNewReservation()" type="button" class="mx-2 btn btn-dark">Foglalás</button>    
-</div>
+        <div class="col-4">
+            <div *ngFor="let row of rows" class="col my-2"> 
+                <input [(ngModel)]="newReservation[row.key]" type="text" class="form-control">
+            </div>
+        </div>
+    </div>
+
+        <!-- Hozzáadás gomb -->
+
+    <div class="row-4 d-flex justify-content-center">
+        <button (click)="onNewReservation()" type="button" class="btn btn-dark">Foglalás</button>    
+    </div>
+</div>    

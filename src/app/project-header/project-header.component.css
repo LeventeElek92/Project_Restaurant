@@ -40,3 +40,7 @@ nav.navbar {
 .active{
     text-decoration: underline;
 }
+
+.logout:hover{
+    cursor: pointer;
+}

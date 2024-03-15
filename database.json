@@ -41,7 +41,6 @@
       "vegetarian": "Csőben sült sajtos tészta"
     }
   ],
-
   "foods": [
     {
       "id": "1",
@@ -56,7 +55,7 @@
     {
       "id": "3",
       "foodname": "Rántott szelet",
-      "price": "1 200"
+      "price": "800"
     },
     {
       "id": "4",
@@ -71,38 +70,41 @@
     {
       "id": "6",
       "foodname": "Gyros",
-      "price": "1200"
+      "price": "600"
     }
   ],
-
   "drinks": [
     {
       "id": "1",
       "drinkname": "Kóla",
-      "price": "900"
+      "price": "300"
     },
     {
       "id": "2",
       "drinkname": "Ásvánívíz, szénsavas",
-      "price": "900"
+      "price": "250"
     },
     {
       "id": "3",
       "drinkname": "Ásványvíz, szénsavmentes",
-      "price": "900"
+      "price": "250"
     },
     {
       "id": "4",
       "drinkname": "Pálinka",
-      "price": "1 500"
+      "price": "500"
     },
     {
       "id": "5",
       "drinkname": "Sprite",
-      "price": "600"
+      "price": "300"
+    },
+    {
+      "id": "6",
+      "drinkname": "7UP",
+      "price": "300"
     }
   ],
-
   "reservations": [
     {
       "id": "1",
@@ -111,6 +113,14 @@
       "date": "2024.03.16",
       "email": "oregkovacs@valami.com",
       "phoneNumber": "06-70-123-4567"
+    },
+    {
+      "id": "2",
+      "guestName": "Nagy János",
+      "guestNumber": "5",
+      "date": "2024.03.16",
+      "email": "nagy.janos@valami.com",
+      "phoneNumber": "06-70-303-6742"
     }
   ]
 }
