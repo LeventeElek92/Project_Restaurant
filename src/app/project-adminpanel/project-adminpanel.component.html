@@ -1,3 +1,27 @@
+<h1>Foglalások</h1>
+
+<!-- Asztalfoglalás felület -->
+
+<div class="row">
+    <div *ngFor="let row of rows" class="col text text-light bg-dark">
+            {{ row.text | uppercase }}
+    </div>  
+    <div class="col text text-light bg-dark">
+        MŰVELETEK
+    </div>
+</div>  
+
+<div *ngFor="let reservation of reservations" class="row my-2">
+    <div *ngFor="let row of rows" class="col">
+        {{ reservation[row.key] }}
+    </div>
+
+    <div class="col d-grid gap-2 d-md-block">
+<!--    <button type="button" class="mx-2 btn btn-primary">Módosítás</button> -->
+        <button (click)="onReservationDelete(reservation)" type="button" class="btn btn-danger">Törlés</button>    
+    </div>
+</div>
+
 <h1>Szerkesztő felület</h1>
 
 <!-- Menü -->

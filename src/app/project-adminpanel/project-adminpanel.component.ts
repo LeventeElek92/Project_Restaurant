@@ -16,6 +16,10 @@ export class ProjectAdminpanelComponent {
   drinkCols: any;
   newFood: any={};
   newDrink: any={};
+  reservations: any;
+  rows: any;
+  newReservation: any={};
+
 
   //Adatkérés - Menü
   getData(){
@@ -47,13 +51,24 @@ export class ProjectAdminpanelComponent {
     )
   }
 
+  //Adatkérés - Foglalások
+  getReservData(){
+    this.base.getReservation("reservations").subscribe(
+      reservData=>{
+        this.reservations=reservData;
+        console.log(this.reservations)
+      }
+    )
+  }
+
+
   constructor(
     private base:BaseService, 
     private config: ConfigService
     ){
     this.getData()
     this.columns=this.config.getWeeklyMenuCol()
-      console.log(this.columns),
+    console.log(this.columns),
 
     this.getFoodData()    
     this.foodCols=this.config.getFoodCol()
@@ -61,7 +76,12 @@ export class ProjectAdminpanelComponent {
 
     this.getDrinkData()
     this.drinkCols=this.config.getDrinkCol()
-    console.log(this.drinkCols)
+    console.log(this.drinkCols),
+
+    this.getReservData()
+    this.rows=this.config.getReservRow()
+    console.log(this.rows)
+
   }  
 
   //Menü - módosítás gomb
@@ -120,4 +140,14 @@ export class ProjectAdminpanelComponent {
       }
     )
   }
+
+  //Asztalfoglalás
+
+  onReservationDelete(reservation:any){
+    let id=reservation.id;
+    this.base.onReservationDelete("reservations",id).subscribe(
+      ()=>this.getReservData()
+    )
+  }
+
 }

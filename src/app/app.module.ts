@@ -1,4 +1,4 @@
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA, Component } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -30,7 +30,7 @@ import { ProjectLoginComponent } from './project-login/project-login.component';
     ProjectMainpageComponent,
     ProjectDrinksComponent,
     ProjectFoodsComponent,
-    ProjectLoginComponent
+    ProjectLoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -41,7 +41,8 @@ import { ProjectLoginComponent } from './project-login/project-login.component';
     HttpClientModule,
     ReactiveFormsModule,
     AngularFireModule.initializeApp(Environments.firebaseConfig),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

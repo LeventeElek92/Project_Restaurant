@@ -1,1 +1,16 @@
-<p>works</p>
+<div class="col">
+    <div *ngFor="let row of rows" class="row">
+            {{ row.text }}
+    </div>
+</div>
+
+<div class="col my-4">
+    <div *ngFor="let row of rows" class="col"> 
+        <input [(ngModel)]="newReservation[row.key]" type="text" class="form-control">
+    </div>
+</div>
+    <!-- Hozzáadás gomb -->
+
+<div class="row d-grid gap-2 d-md-block">
+    <button (click)="onNewReservation()" type="button" class="mx-2 btn btn-dark">Foglalás</button>    
+</div>

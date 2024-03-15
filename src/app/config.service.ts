@@ -25,6 +25,14 @@ export class ConfigService {
     {key:"price", text:"Ár(Ft)", type:"number"},  
   ]
 
+  private reservRow=[
+    {key:"id", text:"Foglalás száma", type:"number"},
+    {key:"guestName", text:"Foglaló neve", type:"text"},
+    {key:"guestNumber", text:"Vendégek száma", type:"number"},
+    {key:"date", text:"Időpont", type:"date"},
+    {key:"email", text:"E-mail cím", type:"text"},
+    {key:"phoneNumber", text:"Telefonszám", type:"number"},
+  ]
 
   constructor() { }
 
@@ -38,6 +46,10 @@ export class ConfigService {
 
   getDrinkCol(){
     return this.drinkCol
+  }
+
+  getReservRow(){
+    return this.reservRow
   }
 
 }

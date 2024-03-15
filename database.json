@@ -41,6 +41,7 @@
       "vegetarian": "Csőben sült sajtos tészta"
     }
   ],
+
   "foods": [
     {
       "id": "1",
@@ -70,9 +71,10 @@
     {
       "id": "6",
       "foodname": "Gyros",
-      "price": "600"
+      "price": "1200"
     }
   ],
+
   "drinks": [
     {
       "id": "1",
@@ -96,8 +98,19 @@
     },
     {
       "id": "5",
-      "drinkname": "7UP",
+      "drinkname": "Sprite",
       "price": "600"
+    }
+  ],
+
+  "reservations": [
+    {
+      "id": "1",
+      "guestName": "Kovács János",
+      "guestNumber": "3",
+      "date": "2024.03.16",
+      "email": "oregkovacs@valami.com",
+      "phoneNumber": "06-70-123-4567"
     }
   ]
 }

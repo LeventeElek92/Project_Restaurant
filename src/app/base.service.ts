@@ -8,8 +8,6 @@ import { AngularFireDatabase } from '@angular/fire/compat/database';
 })
 export class BaseService {
   serverURL="http://localhost:3000/" //weeklymenu volt itt
-  //serverURLFood="http://localhost:3000/foods"
-  //serverURLDrink="http://localhost:3000/drinks"
   constructor(private http:HttpClient, private db:AngularFireDatabase) {}
 
   //Menü gombok
@@ -74,6 +72,22 @@ export class BaseService {
     )
   }
 
+  //Asztalfoglalás
+
+  getReservation(somereserv:any){
+    return this.http.get(this.serverURL + somereserv);
+  }
+
+  onReservationDelete(somereserv:string, reservID:any){
+    return this.http.delete(
+      this.serverURL + somereserv + '/' + reservID)
+  }
+
+
+  onNewReservation(somereserv:any, reservID:any){
+    return this.http.post(this.serverURL + somereserv, reservID)
+  }
+ 
 
 }
 

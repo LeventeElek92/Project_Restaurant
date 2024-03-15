@@ -1,0 +1,11 @@
+{"reservations": [
+    {
+      "id": "1",
+      "guestName": "Kovács János",
+      "guestNumber": "3",
+      "date": "2024.03.16",
+      "email": "oregkovacs@valami.com",
+      "phoneNumber": "06-70-123-4567"
+    }
+  ]
+}
